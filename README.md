@@ -1,6 +1,6 @@
 # Tome of the Unkown - Boilerplate
 
-[Check out the demo!](https://entozoon.github.io/tome-of-the-unknown/)
+[Check out the demo!](https://entozoon.github.io/tome-of-the-unknown-boilerplate/)
 
 Using the NPM package
 [Tome of the Unknown](https://github.com/entozoon/tome-of-the-unknown).
