@@ -1,9 +1,9 @@
 # Tome of the Unkown - Boilerplate
 
-(Check it out!)[https://entozoon.github.io/tome-of-the-unknown/]
+[Check out the demo!](https://entozoon.github.io/tome-of-the-unknown/)
 
 Using the NPM package
-[Tome of the Unknown](https://github.com/entozoon/tome-of-the-unknown)
+[Tome of the Unknown](https://github.com/entozoon/tome-of-the-unknown).
 
 ## Develop
 
