@@ -13,7 +13,7 @@ Using the NPM package
 
 Build the project into the /docs directory (which github is set up to use), by:
 
-    npm run build-prod
+    npm run build
     Then commit and push as normal
 
 NOTE: It takes a minutes for github to (automatically) update its live server
