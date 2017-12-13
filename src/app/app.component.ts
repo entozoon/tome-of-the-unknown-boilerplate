@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import { TomeOfTheUnknown } from 'tome-of-the-unknown';
+import { NgModule } from '@angular/core';
 import { TomeService } from 'tome-of-the-unknown';
 
 @Component({
@@ -9,11 +9,22 @@ import { TomeService } from 'tome-of-the-unknown';
 })
 export class AppComponent {
   public articles: any;
+  searchQuery: string;
 
   constructor(private tomeOfTheUnknown: TomeService) {
-    tomeOfTheUnknown.getArticles().then(articles => {
+    this.tomeOfTheUnknown.getArticles().then(articles => {
       this.articles = articles;
-      console.log(this.articles);
+      console.log('Site: ' + this.articles.length + ' articles received');
+    });
+  }
+
+  search() {
+    // No need to pass the query as a parameter, it's already two-way bound to this.searchQuery
+    console.log('Searching: ' + this.searchQuery);
+
+    // Get a filtered array of articles
+    this.tomeOfTheUnknown.search(this.searchQuery).then(articles => {
+      this.articles = articles;
     });
   }
 }

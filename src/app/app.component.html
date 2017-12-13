@@ -2,5 +2,10 @@
   <h1>
     Welcome to the Tome of the Unknown Boilerplate!
   </h1>
-  <!-- <tomeComponent></tomeComponent> -->
+
+  <input [(ngModel)]="searchQuery" (ngModelChange)="search()" type="text" placeholder="Search" />
+
+  <br>
+
+  <div *ngFor="let article of articles">{{article.title}}</div>
 </main>
