@@ -3,9 +3,19 @@
     Welcome to the Tome of the Unknown Boilerplate!
   </h1>
 
-  <input [(ngModel)]="searchQuery" (ngModelChange)="search()" type="text" placeholder="Search" />
+  <nav>
+    <a routerLink="/" routerLinkActive="active">Home</a>
+  </nav>
 
   <br>
 
-  <div *ngFor="let article of articles">{{article.title}}</div>
+  <!-- This needs to be like, within a component so that it can output to router-outlet -->
+  <input [(ngModel)]="searchQuery" (ngModelChange)="search()" type="text" placeholder="Search" />
+  <div class="article-listing" *ngFor="let article of articles">
+    <a routerLink="/article/{{article.id}}">{{article.id}}. {{article.title}}</a>
+    <div>{{article.date}}</div>
+    <div>{{article.excerpt}}</div>
+  </div>
+
+  <router-outlet></router-outlet>
 </main>

@@ -1,0 +1,10 @@
+<!-- If the article variable exists: -->
+<div *ngIf="article">
+  <h1>{{article.title}}</h1>
+
+  <div>
+    {{article.date}}
+  </div>
+
+  <div [innerHTML]="article.content"></div>
+</div>

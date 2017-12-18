@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { TomeService } from 'tome-of-the-unknown';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,10 @@ export class AppComponent {
   public articles: any;
   searchQuery: string;
 
-  constructor(private tomeOfTheUnknown: TomeService) {
+  constructor(
+    private tomeOfTheUnknown: TomeService,
+    private route: ActivatedRoute
+  ) {
     this.tomeOfTheUnknown.getArticles().then(articles => {
       this.articles = articles;
       console.log('Site: ' + this.articles.length + ' articles received');
